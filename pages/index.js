@@ -147,11 +147,11 @@ class WordList extends Component {
     );
   
     let scoredWords = orderScores(scores);
-
-    scoredWords = scoredWords.slice(0, 10);
+    
+    let topWords = scoredWords.slice(0, 10);
     let bottomWords = scoredWords.slice(-5);
   
-    const topTen = scoredWords.map((word) =>
+    const topTen = topWords.map((word) =>
       <li key={word}>{word}</li>
     );
     const bottomFive = bottomWords.map((word) =>
